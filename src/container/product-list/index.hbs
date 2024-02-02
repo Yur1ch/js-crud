@@ -3,9 +3,18 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
 }}
 
-<div>
-  Hello World!
-</div>
+<form class="list">
+  <div class="list__content">
+    <h1 class="list__title">Список товарів</h1>
+    <button class="list__button">
+      <a href=" /product-create">Повернутися на сторінку <br> створення товару</a>
+    </button>
+  </div>
+
+
+  {{> product-card }}
+
+</form>
 
 {{!
 Цей код містить лише те, що буде виводитись в

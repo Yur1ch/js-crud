@@ -1,0 +1,96 @@
+.list {
+  max-width: 1080px;
+  margin: 0 auto; // This centers the element horizontally
+  padding: 20px; // Add padding as needed
+
+  &__title {
+    font-size: 28px;
+    color: rgb(57, 73, 250);;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+  }
+
+  &__button {
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    background-color: rgb(57, 73, 250);
+    padding: 12px 20px;
+    margin-bottom: 12px;
+
+    a{
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+
+.card {
+  display: flex;
+  flex-direction: row;
+  // justify-content: flex-start; 
+  // margin: -10px;
+
+  &__content {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+  }
+
+  &__empty {
+    font-size: 16px;
+    text-align: center;
+    background-color: rgb(255, 255, 147);
+    padding: 6px 8px;
+  }
+
+  &__name {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  &__description {
+    margin-bottom: 18px;
+  }
+
+  &__id {
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 18px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price {
+    font-size: 22px;
+  }
+
+  &__button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: white;
+    border: 1px solid rgb(184, 184, 184);
+    text-decoration: none;
+
+    &:active {
+      transform: translateY(2px); 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    }
+  }
+
+  }

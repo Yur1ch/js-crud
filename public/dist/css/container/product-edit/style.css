@@ -1,0 +1,107 @@
+.edit {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.edit__title {
+  font-size: 36px;
+  color: rgb(57, 73, 250);
+  margin-bottom: 40px;
+}
+.edit__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+.edit__button {
+  text-decoration: none;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 6px;
+  background-color: rgb(57, 73, 250);
+  padding: 12px 20px;
+  margin-bottom: 12px;
+}
+.edit__form {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+.edit__name {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.edit__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 5px;
+}
+.edit__field {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+.edit__field_2 {
+  display: grid;
+  grid-template-rows: auto auto;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+.edit__label {
+  margin-bottom: 5px;
+}
+.edit__label_2 {
+  margin-bottom: 5px;
+}
+.edit__input {
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 2px;
+  padding: 8px;
+}
+.edit__input_2 {
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 2px;
+  padding: 8px;
+  height: 80px;
+}
+.edit__tip {
+  font-size: 10px;
+  color: grey;
+}
+.edit__buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.edit__button_1 {
+  width: 50%;
+  background-color: rgb(57, 73, 250);
+  padding: 10px 0 10px 0;
+  border-radius: 4px;
+  margin-top: 8px;
+  color: white;
+}
+.edit__button_1:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.edit__button_2 {
+  width: 50%;
+  background-color: rgb(255, 0, 0);
+  padding: 10px 0 10px 0;
+  border-radius: 4px;
+  margin-top: 8px;
+  color: white;
+}
+.edit__button_2:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/*# sourceMappingURL=style.css.map */

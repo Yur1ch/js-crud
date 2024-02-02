@@ -1,0 +1,137 @@
+.edit {
+    max-width: 1080px;
+    margin: 0 auto; // This centers the element horizontally
+    padding: 20px; // Add padding as needed
+
+    &__title {
+      font-size: 36px;
+      color: rgb(57, 73, 250);
+      margin-bottom: 40px;
+  }
+
+
+  &__actions {
+    
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      margin-top: 20px;
+      margin-bottom: 50px;
+      border-bottom: 1px solid rgb(221, 221, 221);
+  }
+
+  &__button {
+    text-decoration: none;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    background-color: rgb(57, 73, 250);
+    padding: 12px 20px;
+    margin-bottom: 12px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    // border: 1px solid rgb(159, 159, 159);
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3); // Горизонтальний зсув, вертикальний зсув, розмір тіні, колір тіні
+
+  } 
+
+  &__name {
+      font-size: 24px;
+      margin-bottom: 20px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 5px;
+    }
+
+
+  &__field {
+      display: grid;
+      grid-template-rows: auto auto;
+    }
+
+
+  &__field_2 {
+    display: grid;
+    grid-template-rows: auto auto;
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+&__label {
+    margin-bottom: 5px;
+  }
+
+  &__label_2 {
+    margin-bottom: 5px;
+  }
+
+  &__input {
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 2px;
+    padding: 8px;
+  }
+
+  &__input_2 {
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 2px;
+    padding: 8px;
+    height: 80px;
+  }
+
+  &__tip {
+    font-size: 10px;
+    color: grey;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px    
+  }
+
+  &__button_1 {
+    width: 50%;
+    background-color:  rgb(57, 73, 250);
+    padding: 10px 0 10px 0;
+    border-radius: 4px;
+    margin-top: 8px;
+    color: white;
+
+    &:active {
+      transform: translateY(2px); 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    }
+  }
+
+  &__button_2 {
+    width: 50%;
+    background-color: rgb(255, 0, 0);
+    padding: 10px 0 10px 0;
+    border-radius: 4px;
+    margin-top: 8px;
+    color: white;
+
+    &:active {
+      transform: translateY(2px); 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    }
+  }
+}
+
+
+
+  
+  
+
+  
+
+  
