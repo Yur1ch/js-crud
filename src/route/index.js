@@ -5,60 +5,7 @@ const router = express.Router()
 
 // ================================================================
 
-class User {
-  static #list = []
-
-  constructor(email, login, password) {
-    this.email = email
-    this.login = login
-    this.password = password
-    this.id = new Date().getTime()
-  }
-
-  verifyPassword = (password) => this.password === password
-
-  static add = (user) => {
-    this.#list.push(user)
-  }
-
-  static getList = () => {
-    return this.#list
-  }
-
-  static getById = (id) =>
-    this.#list.find((user) => user.id === id)
-
-  static deleteById = (id) => {
-    const index = this.#list.findIndex(
-      (user) => user.id === id,
-    )
-
-    if (index !== -1) {
-      this.#list.splice(index, 1)
-      return true
-    } else {
-      return false
-    }
-  }
-
-  static updateByID = (id, { email }) => {
-    const user = this.getById(id)
-
-    if (user) {
-      this.update(user, data)
-
-      return true
-    } else {
-      return false
-    }
-  }
-
-  static update = (user, { email }) => {
-    if (email) {
-      user.email = email
-    }
-  }
-}
+class Purchase {}
 
 // ================================================================
 
@@ -68,18 +15,15 @@ class User {
 router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
-  const list = User.getList()
-
   // ↙️ cюди вводимо назву файлу з сontainer
-  res.render('index', {
+  res.render('alert', {
     // вказуємо назву папки контейнера, в якій знаходяться наші стилі
-    style: 'index',
+    style: 'alert',
 
     data: {
-      users: {
-        list,
-        isEmpty: list.lenght === 0,
-      },
+      message: 'Операція успішна',
+      info: 'Товар створений',
+      link: '/test-path',
     },
   })
   // ↑↑ сюди вводимо JSON дані
