@@ -30,12 +30,12 @@ class Product {
     const index = this.#list.findIndex(
       (product) => product.id === id,
     )
-    if (index !== -1) {
-      this.#list.splice(index, 1)
-      return true
-    } else {
-      return false
-    }
+    // if (index !== -1) {
+    //   this.#list.splice(index, 1)
+    //   return true
+    // } else {
+    //   return false
+    // }
   }
   static updateById = (id, data) => {
     const product = this.getById(id)
@@ -111,20 +111,25 @@ router.get('/product-list', function (req, res) {
 // ================================================================
 
 router.get('/product-edit', function (req, res) {
+  // res.render генерує нам HTML сторінку
   const { id } = req.query
   const product = Product.getById(Number(id))
+  // console.log(product)
   if (product) {
+    // ↙️ cюди вводимо назву файлу з сontainer
     return res.render('product-edit', {
+      // вказуємо назву папки контейнера, в якій знаходяться наші стилі
       style: 'product-edit',
       data: {
-        name: 'product.name',
-        price: 'product.price',
-        id: 'product.id',
-        description: 'product.description',
+        name: product.name,
+        price: product.price,
+        id: product.id,
+        description: product.description,
       },
     })
   } else {
     return res.render('product-alert', {
+      // вказуємо назву папки контейнера, в якій знаходяться наші стилі
       style: 'product-alert',
       info: 'Продукту за таким ID не знайдено',
     })
@@ -152,6 +157,20 @@ router.post('/product-edit', function (req, res) {
     })
   }
   // ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+router.get('/product-delete', function (req, res) {
+  const { id } = req.query
+
+  Product.deleteById(Number(id))
+
+  res.render('product-alert', {
+    style: 'product-alert',
+    message: 'Товар був успішно видалений',
+    info: 'Товар видалено',
+  })
 })
 
 // router.post('/product-edit', function (req, res) {

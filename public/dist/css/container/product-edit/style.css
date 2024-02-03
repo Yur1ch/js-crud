@@ -26,6 +26,10 @@
   padding: 12px 20px;
   margin-bottom: 12px;
 }
+.edit__button a {
+  color: white;
+  text-decoration: none;
+}
 .edit__form {
   display: flex;
   flex-direction: column;
